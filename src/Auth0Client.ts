@@ -492,7 +492,8 @@ export class Auth0Client {
     );
 
     const transaction = this.transactionManager.get();
-
+    console.log('transaction ======>', transaction)
+			
     if (!transaction) {
       throw new GenericError('missing_transaction', 'Invalid state');
     }
